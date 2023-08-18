@@ -37,6 +37,12 @@ class DataBase:
     def set_user(self, chat_id, update):
         return self.users.update_one({"chat_id": chat_id}, {"$set": update})
 
+class TextAndKeyboard:
+    def __init__(self, text, keyboard):
+        self.text = text
+        self.keyboard = keyboard
+
+
 # db = DataBase()
 #
 # new_user = {'uid': 154356,
